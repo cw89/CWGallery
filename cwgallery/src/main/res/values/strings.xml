@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CWGallery</string>
+
+
+    <string name="cw_title_directory">앨범선택</string>
+    <string name="cw_title_directory_total">전체보기</string>
+    <string name="cw_photo_max_count">사진은 최대 [##COUNT##]개까지 등록가능합니다.</string>
+</resources>

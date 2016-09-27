@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        consumerProguardFiles "proguard-rules.pro"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+
+    }
+}
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'cwgallery'
+
+    publishedGroupId = 'cw89'
+    libraryName = 'CWGallery'
+    artifact = 'cwgallery'
+
+    libraryDescription = 'Screen shows the folders Gallery. \nSelect multiple photos in the gallery, the callback path'
+
+    siteUrl = 'https://github.com/cw89/CWGallery'
+    gitUrl = 'https://github.com/cw89/CWGallery.git'
+
+    libraryVersion = rootProject.ext.android.versionName
+
+    developerId = 'cw89'
+    developerName = 'KimChangWan'
+    developerEmail = 'cwank89@gmail.com'
+
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile rootProject.ext.dependencies["com.android.support:appcompat-v7"]
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+}
+apply from: 'https://raw.githubusercontent.com/cw89/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/cw89/JCenter/master/bintrayv1.gradle'
