@@ -25,7 +25,7 @@ import android.widget.LinearLayout;
 import cw89.cwgallery.R;
 
 /**
- * Created by chang-wan on 2016. 9. 22..
+ * Created by chang-wan on 2016. 10. 14..
  */
 public abstract class CWGallerySettings {
 
