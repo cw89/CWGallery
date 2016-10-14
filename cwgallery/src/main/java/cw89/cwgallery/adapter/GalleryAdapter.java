@@ -118,12 +118,21 @@ public class GalleryAdapter extends BaseAdapter {
             holder.cBox = (CheckBox) convertView
                     .findViewById(R.id.check_box);
 
-            Drawable drawable = CWGallery.getInstance(mActivity).getSettings().getGalleryCheckBoxResource();
-            holder.cBox.setButtonDrawable(drawable);
 
-            holder.cBox.setBackgroundColor(Color.TRANSPARENT);
+            Drawable drawable = CWGallery.getInstance(mActivity).getSettings().getGalleryCheckBoxResource();
+            if(drawable !=null) {
+                holder.cBox.setButtonDrawable(drawable);
+                holder.cBox.setBackgroundColor(Color.TRANSPARENT);
+
+            }
+
+
             int size = CWGallery.getInstance(mActivity).getSettings().getGalleryCheckBoxSize();
-            holder.cBox.setLayoutParams(new LinearLayout.LayoutParams(size, size));
+            int margins = CWGallery.getInstance(mActivity).getSettings().getGalleryCheckBoxMargins();
+            LinearLayout.LayoutParams params_check = new LinearLayout.LayoutParams(size, size);
+            params_check.rightMargin =margins;
+            params_check.topMargin = margins;
+            holder.cBox.setLayoutParams(params_check);
 
             convertView.setTag(holder);
         } else {

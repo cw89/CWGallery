@@ -59,6 +59,7 @@ public abstract class CWGallerySettings {
     protected int galleryBackgroundResource;
     protected Drawable galleryCheckBoxResource;
     protected int galleryCheckBoxSize;
+    protected int galleryCheckBoxMargins;
 
     protected boolean galleryCheckCountStatus;
     protected int galleryCheckCountStatusTextColor;
@@ -116,9 +117,11 @@ public abstract class CWGallerySettings {
 
         galleryBackgroundResource = 0;
 
-        galleryCheckBoxResource = (Drawable) context.getResources().getDrawable(R.drawable.v2_checkbox, null);
+        galleryCheckBoxResource = null;
 
         galleryCheckBoxSize = LinearLayout.LayoutParams.WRAP_CONTENT;
+
+        galleryCheckBoxMargins = 0;
 
         galleryCheckCountStatus = true;
 
@@ -331,6 +334,16 @@ public abstract class CWGallerySettings {
 
     public int getGalleryCheckBoxSize() {
         return galleryCheckBoxSize;
+    }
+
+
+    public void setGalleryCheckBoxMargins(int margins) {
+        this.galleryCheckBoxMargins = margins;
+    }
+
+    public int getGalleryCheckBoxMargins()
+    {
+        return galleryCheckBoxMargins;
     }
 
 

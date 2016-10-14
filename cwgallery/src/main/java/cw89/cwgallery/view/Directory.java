@@ -66,6 +66,7 @@ public class Directory {
 
         this.mActivity = activity;
         settings = CWGallery.getInstance(mActivity).getSettings();
+
         init();
     }
 
@@ -97,6 +98,7 @@ public class Directory {
 
     private void onFindView() {
         btn_back = (ImageButton) parentView.findViewById(R.id.btn_back);
+
         header = (RelativeLayout) parentView.findViewById(R.id.header);
 
         txt_title = (TextView) parentView.findViewById(R.id.txt_title);
@@ -117,7 +119,7 @@ public class Directory {
             }
         }
         btn_back.setImageResource(settings.getHeaderBackBtnResource());
-
+        btn_back.setImageResource(android.R.drawable.btn_default);
         txt_title.setTextColor(settings.getHeaderTextColor());
         txt_title.setTextSize(TypedValue.COMPLEX_UNIT_PX, settings.getHeaderTextSize());
         txt_title.setText(settings.getTitle());

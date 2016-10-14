@@ -28,15 +28,12 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="top|right"
-                android:paddingRight="8dp"
-                android:paddingTop="8dp">
+                android:gravity="top|right">
 
                 <CheckBox
                     android:id="@+id/check_box"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:button="@null"></CheckBox>
+                    android:layout_height="wrap_content"></CheckBox>
             </LinearLayout>
         </FrameLayout>
     </LinearLayout>
