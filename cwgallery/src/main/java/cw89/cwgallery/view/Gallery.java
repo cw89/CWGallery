@@ -229,7 +229,7 @@ public class Gallery {
                     if (totalCheck) {
                         return;
                     } else {
-                        requestData();
+                        requestData(_id);
 
                     }
                     lastitemVisibleFlag = false;
@@ -248,7 +248,7 @@ public class Gallery {
     }
 
 
-    public void requestData() {
+    public void requestData(String _id) {
 
 
         try {

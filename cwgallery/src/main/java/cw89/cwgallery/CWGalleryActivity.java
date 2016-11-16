@@ -90,7 +90,7 @@ public class CWGalleryActivity extends Activity implements OnGalleryCallBackList
 
         mGallery = new Gallery(mActivity);
         mGallery.createView(id, name);
-        mGallery.requestData();
+        mGallery.requestData(id);
     }
 
     public void onBackPressed() {
